@@ -3,6 +3,7 @@
 add_theme_support('menus');
 add_theme_support('widgets');
 add_theme_support('post-thumbnails');
+add_theme_support( 'align-wide' );
 
 register_nav_menus(['patrimoine_menu_principal' => 'menu de navigation principal']);
 

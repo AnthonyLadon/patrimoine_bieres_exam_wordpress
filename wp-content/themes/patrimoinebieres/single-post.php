@@ -2,10 +2,12 @@
 <div class="inner-container">
         <?php
             if(have_posts()){
+
                 while(have_posts()) {
                     the_post();
                     echo "<div class='brewery_backlink'>";
-                    echo "<a href='".get_the_permalink()."'>Brasseries</a>";
+
+                    echo "<a href='".get_category_link(get_the_category()[0]->term_id)."'>retour catégorie</a>";
                     echo "</div>";
 
                     echo "<article>";
@@ -20,7 +22,7 @@
 
                     echo "<div class='brewery_desc'>";
                     echo "<p>".the_content()."</p>";
-                    
+
                     echo "</article>";
                     echo "</div>";
                 }}?>
