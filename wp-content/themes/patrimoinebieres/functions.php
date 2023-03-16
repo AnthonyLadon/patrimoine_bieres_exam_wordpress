@@ -8,12 +8,26 @@ register_nav_menus(['patrimoine_menu_principal' => 'menu de navigation principal
 
 register_sidebar(
     array(
-        'name' => __('footer principal', 'my_theme_lang'),
-        'id' => 'footer_principal',
-        'before_widget' => '<div class="wdgt_left">',
+        'name' => __('footer left', 'my_theme_lang'),
+        'id' => 'patrimoine_footer_gauche',
+        'before_widget' => '<div id="f_left">',
         'after_widget' => '</div>',
-        'before-sidebar' => '<div class="zone_left">',
-        'after_sidebar' => '</div>'
+    )
+);
+register_sidebar(
+    array(
+        'name' => __('footer center', 'my_theme_lang'),
+        'id' => 'patrimoine_footer_centre',
+        'before_widget' => '<div id="f_center">',
+        'after_widget' => '</div>',
+    )
+);
+register_sidebar(
+    array(
+        'name' => __('footer right', 'my_theme_lang'),
+        'id' => 'patrimoine_footer_droit',
+        'before_widget' => '<div id="f_right">',
+        'after_widget' => '</div>',
     )
 );
 
