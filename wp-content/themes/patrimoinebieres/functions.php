@@ -2,6 +2,7 @@
 
 add_theme_support('menus');
 add_theme_support('widgets');
+add_theme_support('post-thumbnails');
 
 register_nav_menus(['patrimoine_menu_principal' => 'menu de navigation principal']);
 
@@ -31,7 +32,7 @@ register_sidebar(
     )
 );
 
-function patrimoine_load_css() {
-    wp_enqueue_style('patrimoine-theme',get_template_directory_uri().'/cs 
-    s/style.css');
+function patrimoinebieres_load_css() {
+    wp_enqueue_style('patrimoinebieres',get_template_directory_uri().'/cs 
+    s/festival.css', array(), false, 'all');
     }

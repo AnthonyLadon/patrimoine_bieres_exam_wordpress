@@ -13,7 +13,7 @@
         <?php wp_head(); ?>
  
     </head> 
-    <body class="home">
+    <body>
         <header>
             <div id="wrapper">
                 <img id="logo" src="<?php bloginfo('url')?>/wp-content/themes/patrimoinebieres/assets/logo.png" alt="logo du site">
