@@ -374,3 +374,27 @@ main .wp-block-group {
 .wpcf7-not-valid {
   border-bottom: 1px solid #f00 !important;
 }
+
+.banniere {
+  position: relative;
+  background-color: #000;
+  background-size: cover;
+  background-position: 50%;
+  min-height: 430px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banniere-contenus {
+  width: calc(100% - 70px);
+  z-index: 1;
+  color: #f8f9f9;
+}
+
+.centered {
+  text-align: center;
+}
