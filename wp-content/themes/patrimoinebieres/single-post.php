@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <div class="inner-container">
+<h1>single-post.php</h1>
         <?php
             if(have_posts()){
 

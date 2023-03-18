@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 <div class="inner-container">
-    <h1>single-brasseries.php</h1>
+
         <?php
             if(have_posts()){
 
                 while(have_posts()) {
                     the_post();
                     echo "<div class='brewery_backlink'>";
-
+                    echo "<a href='".get_url_by_slug('brasseries')."'>retour catégorie</a>";
+                    echo "</div>";
 
                     echo "<article>";
 

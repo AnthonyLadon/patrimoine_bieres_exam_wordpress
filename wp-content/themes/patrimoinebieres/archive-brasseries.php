@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<h1>archive-brasseries.php</h1>
         <?php
             if(have_posts()){
                 echo "<div class='inner-container'>";

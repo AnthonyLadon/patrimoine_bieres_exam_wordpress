@@ -12,7 +12,9 @@ register_sidebar(
     array(
         'name' => __('footer left', 'my_theme_lang'),
         'id' => 'patrimoine_footer_gauche',
-        'before_widget' => '<div id="f_left">',
+        'before_sidebar' => '<div id="f_left">',
+        'after_sidebar' => '</div>',
+        'before_widget' => '<div>',
         'after_widget' => '</div>',
     )
 );
@@ -33,7 +35,27 @@ register_sidebar(
     )
 );
 
+
+
+// charger partout dans le site la feuille css/festival.css
 function patrimoinebieres_load_css() {
-    wp_enqueue_style('patrimoinebieres',get_template_directory_uri().'/cs 
-    s/festival.css', array(), false, 'all');
+    wp_register_style('patrimoinebieres',get_template_directory_uri().'/css/festival.css', null, '1.0', 'screen');
+    wp_enqueue_style('patrimoinebieres');
     }
+    add_action( 'wp_enqueue_scripts', 'patrimoinebieres_load_css' );
+
+// charger le googleFonts
+function patrimoinebieres_load_fonts() {
+    wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Montserrat%3A300%2C600%7COpen+Sans%3A600&amp;display=swap', null, '1.0', 'screen');
+    wp_enqueue_style('googleFonts');
+    }
+    add_action( 'wp_enqueue_scripts', 'patrimoinebieres_load_fonts' );
+
+
+// recuperer le l'url de la page par son slug
+
+function get_url_by_slug($slug) {
+    $page_url_id = get_page_by_path($slug);
+    $page_url_link = get_permalink($page_url_id);
+    return $page_url_link;
+}

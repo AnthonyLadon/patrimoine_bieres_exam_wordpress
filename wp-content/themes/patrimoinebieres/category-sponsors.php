@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="inner-container">
-        <h1>Sponsors</h1>
+        <h1>category-sponsors.php</h1>
         <?php
 
             if(have_posts()){

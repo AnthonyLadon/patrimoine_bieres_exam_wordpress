@@ -1,8 +1,8 @@
 <?php
 /**
-** Plugin Name: Patrimoine Brewery
-** Plugin URI: http://www.patrimoine-brewery.com
-** Description: Plugin pour le site Patrimoine Brewery
+** Plugin Name: Patrimoine Bieres
+** Plugin URI: http://www.patrimoine-bieres.com
+** Description: Plugin pour le site Patrimoine Bieres
 ** Version: 1.0
 ** Author: Anthony Ladon
 */
@@ -10,9 +10,9 @@
 function contenus_perso_patrimoine_bieres(){
 
          $labels = array(
-            'name'                =>  __('Brasseries', 'patrimoine_bieres'),
-            'singular_name'       => __('Brasserie', 'patrimoine_bieres'),
-            'menu_name'           => __('Brasseries', 'patrimoine_bieres'),
+            'name'                =>  __('brewery', 'patrimoine_bieres'),
+            'singular_name'       => __('brewery', 'patrimoine_bieres'),
+            'menu_name'           => __('Brewery', 'patrimoine_bieres'),
             'all_items'           => __('Toutes les brasseries', 'patrimoine_bieres'),
             'view_item'           => __('Voir la brasserie', 'patrimoine_bieres'),
             'add_new_item'        => __('Ajouter une brasserie', 'patrimoine_bieres'),
@@ -38,7 +38,6 @@ function contenus_perso_patrimoine_bieres(){
             'menu_position' => 21,
             'capability_type' => 'page',
             'show_in_rest' => false,
-            'taxonomies' => array( 'category' )
         );
 
         register_post_type('brasseries', $args);
